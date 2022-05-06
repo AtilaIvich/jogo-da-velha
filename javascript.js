@@ -8,6 +8,9 @@ const q7 = document.getElementById('q7');
 const q8 = document.getElementById('q8');
 const q9 = document.getElementById('q9');
 
+const outp1 = document.getElementById('output1');
+const outp2 = document.getElementById('output2');
+
 const outpName1 = document.getElementById('outputName1');
 const outpName2 = document.getElementById('outputName2');
 
@@ -24,11 +27,17 @@ q7.addEventListener('click', () => play(7));
 q8.addEventListener('click', () => play(8));
 q9.addEventListener('click', () => play(9));
 
-var name1 = prompt('Player 1 nickname:').toUpperCase();
-outpName1.innerText = `${name1}`
+var name1 = prompt('Player 1 nickname:');
+if (name1 == null) {
+    name1 = 'P1';
+}
+outpName1.innerText = `${name1.toUpperCase()}`;
 
-var name2 = prompt('Player 2 nickname:').toUpperCase();
-outpName2.innerText = `${name2}`
+var name2 = prompt('Player 2 nickname:');
+if (name2 == null) {
+    name2 = 'P2';
+}
+outpName2.innerText = `${name2.toUpperCase()}`;
 
 
 var turn = 1;
@@ -161,12 +170,14 @@ function play(n) {
     }
 
     if (turn == 1) {
-        outpName1.style.textShadow = '1px 1px 0px #F27405'
-        outpName2.style.textShadow = '';
+        outp1.style.borderBottom = '3px solid #F6E103';
+        outp2.style.borderBottom = '';
+        outp2.style.paddingBottom = '';
     } else if (turn == 2) {
-        outpName1.style.textShadow = '';
-        outpName2.style.textShadow = '1px 1px 0px #F27405'
-    }
+        outp1.style.borderBottom = '';
+        outp2.style.borderBottom = '3px solid #F6E103';
+        outp2.style.paddingBottom = 'inherit';
+    } 
 
     if (a1 == 1 && a2 == 1 && a3 == 1) {
         setTimeout(win1, 200);
