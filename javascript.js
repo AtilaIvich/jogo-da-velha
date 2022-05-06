@@ -162,74 +162,82 @@ function play(n) {
 
     if (a1 == 1 && a2 == 1 && a3 == 1) {
         win1();
-        restart();
+        setTimeout(restart, 200);
+        ;
     }
     if (b1 == 1 && b2 == 1 && b3 == 1) {
         win1();
-        restart();
+        setTimeout(restart, 200);
     }
     if (c1 == 1 && c2 == 1 && c3 == 1) {
         win1();
-        restart();
+        setTimeout(restart, 200);
     }
 
     if (a1 == 1 && b1 == 1 && c1 == 1) {
         win1();
-        restart();
+        setTimeout(restart, 200);
     }
     if (a2 == 1 && b2 == 1 && c2 == 1) {
         win1();
-        restart();
+        setTimeout(restart, 200);
     }
     if (a3 == 1 && b3 == 1 && c3 == 1) {
         win1();
-        restart();
+        setTimeout(restart, 200);
     }
 
     if (a1 == 1 && b2 == 1 && c3 == 1) {
         win1();
-        restart();
+        setTimeout(restart, 200);
     }
     if (a3 == 1 && b2 == 1 && c1 == 1) {
         win1();
-        restart();
+        setTimeout(restart, 200);
     }
 
 
     if (a1 == 2 && a2 == 2 && a3 == 2) {
         win2();
-        restart();
+        setTimeout(restart, 200);
     }
     if (b1 == 2 && b2 == 2 && b3 == 2) {
         win2();
-        restart();
+        setTimeout(restart, 200);
     }
     if (c1 == 2 && c2 == 2 && c3 == 2) {
         win2();
-        restart();
+        setTimeout(restart, 200);
     }
 
     if (a1 == 2 && b1 == 2 && c1 == 2) {
         win2();
-        restart();
+        setTimeout(restart, 200);
     }
     if (a2 == 2 && b2 == 2 && c2 == 2) {
         win2();
-        restart();
+        setTimeout(restart, 200);
     }
     if (a3 == 2 && b3 == 2 && c3 == 2) {
         win2();
-        restart();
+        setTimeout(restart, 200);
     }
 
     if (a1 == 2 && b2 == 2 && c3 == 2) {
         win2();
-        restart();
+        setTimeout(restart, 200);
     }
     if (a3 == 2 && b2 == 2 && c1 == 2) {
         win2();
-        restart();
+        setTimeout(restart, 200);
     }
+
+
+    if ((a1 == 1 || a1 == 2) && (a2 == 1 || a2 == 2) && (a3 == 1 || a3 == 2) &&
+        (b1 == 1 || b1 == 2) && (b2 == 1 || b2 == 2) && (b3 == 1 || b3 == 2) &&
+        (c1 == 1 || c1 == 2) && (c2 == 1 || c2 == 2) && (c3 == 1 || c3 == 2)) {
+            restart();
+         }
 }
 
 function win1() {
