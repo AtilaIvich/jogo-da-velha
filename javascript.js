@@ -24,11 +24,11 @@ q7.addEventListener('click', () => play(7));
 q8.addEventListener('click', () => play(8));
 q9.addEventListener('click', () => play(9));
 
-var name1 = prompt('Player 1 nickname').toUpperCase();
-outpName1.innerText = `${name1} SCORE:`
+var name1 = prompt('Player 1 nickname:').toUpperCase();
+outpName1.innerText = `${name1}`
 
-var name2 = prompt('Player 2 nickname').toUpperCase();
-outpName2.innerText = `${name2} SCORE:`
+var name2 = prompt('Player 2 nickname:').toUpperCase();
+outpName2.innerText = `${name2}`
 
 
 var turn = 1;
@@ -160,75 +160,83 @@ function play(n) {
             break
     }
 
+    if (turn == 1) {
+        outpName1.style.textShadow = '1px 1px 0px #F27405'
+        outpName2.style.textShadow = '';
+    } else if (turn == 2) {
+        outpName1.style.textShadow = '';
+        outpName2.style.textShadow = '1px 1px 0px #F27405'
+    }
+
     if (a1 == 1 && a2 == 1 && a3 == 1) {
-        win1();
+        setTimeout(win1, 200);
         setTimeout(restart, 200);
         ;
     }
     if (b1 == 1 && b2 == 1 && b3 == 1) {
-        win1();
+        setTimeout(win1, 200);
         setTimeout(restart, 200);
     }
     if (c1 == 1 && c2 == 1 && c3 == 1) {
-        win1();
+        setTimeout(win1, 200);
         setTimeout(restart, 200);
     }
 
     if (a1 == 1 && b1 == 1 && c1 == 1) {
-        win1();
+        setTimeout(win1, 200);
         setTimeout(restart, 200);
     }
     if (a2 == 1 && b2 == 1 && c2 == 1) {
-        win1();
+        setTimeout(win1, 200);
         setTimeout(restart, 200);
     }
     if (a3 == 1 && b3 == 1 && c3 == 1) {
-        win1();
+        setTimeout(win1, 200);
         setTimeout(restart, 200);
     }
 
     if (a1 == 1 && b2 == 1 && c3 == 1) {
-        win1();
+        setTimeout(win1, 200);
         setTimeout(restart, 200);
     }
     if (a3 == 1 && b2 == 1 && c1 == 1) {
-        win1();
+        setTimeout(win1, 200);
         setTimeout(restart, 200);
     }
 
 
     if (a1 == 2 && a2 == 2 && a3 == 2) {
-        win2();
+        setTimeout(win2, 200);
         setTimeout(restart, 200);
     }
     if (b1 == 2 && b2 == 2 && b3 == 2) {
-        win2();
+        setTimeout(win2, 200);
         setTimeout(restart, 200);
     }
     if (c1 == 2 && c2 == 2 && c3 == 2) {
-        win2();
+        setTimeout(win2, 200);
         setTimeout(restart, 200);
     }
 
     if (a1 == 2 && b1 == 2 && c1 == 2) {
-        win2();
+        setTimeout(win2, 200);
         setTimeout(restart, 200);
     }
     if (a2 == 2 && b2 == 2 && c2 == 2) {
-        win2();
+        setTimeout(win2, 200);
         setTimeout(restart, 200);
     }
     if (a3 == 2 && b3 == 2 && c3 == 2) {
-        win2();
+        setTimeout(win2, 200);
         setTimeout(restart, 200);
     }
 
     if (a1 == 2 && b2 == 2 && c3 == 2) {
-        win2();
+        setTimeout(win2, 200);
         setTimeout(restart, 200);
     }
     if (a3 == 2 && b2 == 2 && c1 == 2) {
-        win2();
+        setTimeout(win2, 200);
         setTimeout(restart, 200);
     }
 
